@@ -1,0 +1,8 @@
+{
+  "name": "Zylo",
+  "description": "AI-powered social media growth, auto-posting scheduler, and cross-platform automation workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

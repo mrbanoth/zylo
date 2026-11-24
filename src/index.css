@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-zylo-ink: #111214;
+  --color-zylo-muted: #5A5D65;
+  --color-zylo-mint: #7CF2B5;
+  --color-zylo-violet: #B39FF8;
+  --color-zylo-lilac: #F4D4FA;
+  --color-zylo-yellow: #FCE694;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color: #111214;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Organic bento corner shapes matching Zylo visual language */
+.bento-leaf-tl {
+  border-radius: 36px 36px 36px 120px;
+}
+
+.bento-leaf-tr {
+  border-radius: 120px 36px 36px 36px;
+}
+
+.bento-leaf-bl {
+  border-radius: 36px 120px 36px 36px;
+}
+
+.bento-leaf-br {
+  border-radius: 36px 36px 120px 36px;
+}
+
+@media (max-width: 640px) {
+  .bento-leaf-tl {
+    border-radius: 28px 28px 28px 72px;
+  }
+  .bento-leaf-tr {
+    border-radius: 72px 28px 28px 28px;
+  }
+  .bento-leaf-bl {
+    border-radius: 28px 72px 28px 28px;
+  }
+  .bento-leaf-br {
+    border-radius: 28px 28px 72px 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
